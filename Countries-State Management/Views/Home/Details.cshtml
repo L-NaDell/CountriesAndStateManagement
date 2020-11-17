@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<h3>@TempData["greeting"]</h3>
+<h3>The official language of @TempData["country"] is @TempData["language"] and the national colors are @TempData["colors"].</h3>
+
+<form asp-controller="Home" asp-action="Description">
+    <input type="hidden" name="country" value="@TempData["country"]" />
+<p><button> Go to description</button></p>
+</form>
+

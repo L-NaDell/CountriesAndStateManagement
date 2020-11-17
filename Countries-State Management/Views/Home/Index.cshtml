@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Country>
+
+<p>
+    <label for="Countries">What country would you like to know about?</label>
+</p>
+<form asp-controller="Home" asp-action="Details">
+
+    <select name="country" required>
+        @foreach (Country c in Model)
+        {
+            <option value="@c.Name">@c.Name</option>
+        }
+    </select>
+    <p></p>
+    <p><button>Submit</button></p>
+</form>
+

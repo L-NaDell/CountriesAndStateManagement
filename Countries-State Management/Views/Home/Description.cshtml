@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Description";
+}
+
+
+<h1>@TempData.Peek("country") Description</h1>
+
+<h3>@TempData["description"]</h3>
+<br />
+<br />
+<p>this is @TempData.Peek("country")</p>
+@{
+    string picUrl = $"~/pics/{TempData.Peek("country")}.png";
+}
+<img width="90%" src=@picUrl />
